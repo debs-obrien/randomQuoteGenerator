@@ -42,6 +42,8 @@ const printQuote = () => {
 
 
 };
+setInterval(printQuote, 3000);
+
 let printQuoteClearInterval = () => {
     printQuote();
     clearInterval(printQuote);
@@ -50,7 +52,6 @@ let printQuoteClearInterval = () => {
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuoteClearInterval, false);
-clearInterval(printQuote);
-setInterval(printQuote, 3000);
+
 
 
